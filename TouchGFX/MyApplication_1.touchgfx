@@ -1,0 +1,958 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "game_background_over",
+            "Width": 240,
+            "Height": 320,
+            "Visible": false,
+            "Color": {
+              "Red": 11,
+              "Green": 137,
+              "Blue": 227
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "on_button",
+            "X": 70,
+            "Y": 110,
+            "Width": 100,
+            "Height": 100,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_small_outline_disabled.png",
+            "Released": "lo.png"
+          },
+          {
+            "Type": "BoxProgress",
+            "Name": "boxProgress1",
+            "X": 20,
+            "Y": 151,
+            "Width": 200,
+            "Height": 18,
+            "Visible": false,
+            "Color": {
+              "Green": 240,
+              "Blue": 255
+            },
+            "Direction": "Right",
+            "Preset": "alternate_theme\\presets\\boxprogress\\thick\\small_active.json",
+            "FileNameBackground": "__generated\\alternate_theme_images_widgets_boxprogress_thick_small.png",
+            "IndicatorPositionWidth": 200,
+            "IndicatorPositionHeight": 18,
+            "ProgressRangeMax": 127
+          },
+          {
+            "Type": "Box",
+            "Name": "game_outside",
+            "Width": 240,
+            "Height": 320,
+            "Visible": false,
+            "Color": {
+              "Red": 5,
+              "Green": 97,
+              "Blue": 5
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "game_background",
+            "X": 8,
+            "Y": 13,
+            "Width": 224,
+            "Height": 224,
+            "Visible": false,
+            "Filename": "game_background.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Score_text",
+            "X": 42,
+            "Y": 253,
+            "Width": 152,
+            "Height": 36,
+            "Visible": false,
+            "TextId": "__SingleUse_PS0K",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 252,
+              "Blue": 252
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_WFE6",
+              "UseBuffer": true,
+              "BufferSize": 10000
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "high_score_text",
+            "X": 42,
+            "Y": 286,
+            "Width": 152,
+            "Height": 36,
+            "Visible": false,
+            "TextId": "__SingleUse_FB17",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 252,
+              "Blue": 252
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_470N",
+              "UseBuffer": true,
+              "BufferSize": 10000
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "head_right",
+            "X": 349,
+            "Y": 160,
+            "Width": 16,
+            "Height": 16,
+            "Visible": false,
+            "Filename": "head_right.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "head_up",
+            "X": 409,
+            "Y": 130,
+            "Width": 16,
+            "Height": 16,
+            "Visible": false,
+            "Filename": "head_up.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "head_down",
+            "X": 325,
+            "Y": 130,
+            "Width": 16,
+            "Height": 16,
+            "Visible": false,
+            "Filename": "head_down.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "head_left",
+            "X": 409,
+            "Y": 160,
+            "Width": 16,
+            "Height": 16,
+            "Visible": false,
+            "Filename": "head_left.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "food",
+            "X": 51,
+            "Y": 61,
+            "Width": 16,
+            "Height": 16,
+            "Visible": false,
+            "Filename": "apple-removebg-preview - Copy.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "Button",
+            "Name": "right_button",
+            "X": 199,
+            "Y": 268,
+            "Width": 36,
+            "Height": 36,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_micro_outline_pressed.png",
+            "Released": "left_button.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "left_button",
+            "X": 152,
+            "Y": 268,
+            "Width": 36,
+            "Height": 36,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_micro_outline_pressed.png",
+            "Released": "right_button.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "down_button",
+            "X": 105,
+            "Y": 286,
+            "Width": 36,
+            "Height": 36,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_micro_outline_pressed.png",
+            "Released": "down_button.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "up_button",
+            "X": 105,
+            "Y": 253,
+            "Width": 36,
+            "Height": 36,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_micro_outline_pressed.png",
+            "Released": "up_button.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "retry",
+            "X": 51,
+            "Y": 229,
+            "Width": 138,
+            "Height": 36,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_rounded_inactive.png",
+            "Released": "retry.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "Exit",
+            "X": 51,
+            "Y": 277,
+            "Width": 138,
+            "Height": 36,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_36_small_round_pressed.png",
+            "Released": "exit.png"
+          },
+          {
+            "Type": "Container",
+            "Name": "MyContainer",
+            "Width": 247,
+            "Height": 271,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "up_box",
+                "X": 8,
+                "Width": 225,
+                "Height": 13,
+                "Color": {
+                  "Red": 32,
+                  "Green": 158,
+                  "Blue": 3
+                }
+              },
+              {
+                "Type": "Box",
+                "Name": "down_box",
+                "X": 6,
+                "Y": 237,
+                "Width": 227,
+                "Height": 16,
+                "Color": {
+                  "Red": 32,
+                  "Green": 158,
+                  "Blue": 3
+                }
+              },
+              {
+                "Type": "Box",
+                "Name": "right_box",
+                "X": -7,
+                "Width": 15,
+                "Height": 253,
+                "Color": {
+                  "Red": 32,
+                  "Green": 158,
+                  "Blue": 3
+                }
+              },
+              {
+                "Type": "Box",
+                "Name": "left_box",
+                "X": 232,
+                "Width": 15,
+                "Height": 253,
+                "Color": {
+                  "Red": 32,
+                  "Green": 158,
+                  "Blue": 3
+                }
+              }
+            ]
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "food_score_image",
+            "X": 11,
+            "Y": 254,
+            "Width": 23,
+            "Height": 29,
+            "Visible": false,
+            "Filename": "apple-removebg-preview - Copy.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "start_game_snake",
+            "Width": 240,
+            "Height": 320,
+            "Visible": false,
+            "Filename": "Slide1.PNG",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "Button",
+            "Name": "start_button",
+            "X": 48,
+            "Y": 115,
+            "Width": 144,
+            "Height": 60,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_pressed.png",
+            "Released": "play.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "setting_button",
+            "X": 6,
+            "Y": 276,
+            "Width": 36,
+            "Height": 36,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_micro_outline_pressed.png",
+            "Released": "setting.png"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "loading_image",
+            "X": 51,
+            "Y": 105,
+            "Width": 138,
+            "Height": 46,
+            "Visible": false,
+            "Filename": "loading-removebg-preview.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "Box",
+            "Name": "setting_screen",
+            "X": 12,
+            "Y": 54,
+            "Width": 216,
+            "Height": 213,
+            "Visible": false,
+            "Color": {
+              "Red": 8,
+              "Green": 149,
+              "Blue": 209
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "home_button",
+            "X": 102,
+            "Y": 249,
+            "Width": 36,
+            "Height": 36,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_micro_outline_pressed.png",
+            "Released": "home.png"
+          },
+          {
+            "Type": "Container",
+            "Name": "Setting_Container",
+            "Width": 250,
+            "Height": 250,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "collide_text",
+                "X": 24,
+                "Y": 182,
+                "Width": 109,
+                "Height": 54,
+                "TextId": "__SingleUse_KPHE",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "fast_text",
+                "X": 40,
+                "Y": 129,
+                "Width": 63,
+                "Height": 54,
+                "TextId": "__SingleUse_G5LM",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "float_text",
+                "X": 31,
+                "Y": 83,
+                "Width": 80,
+                "Height": 54,
+                "TextId": "__SingleUse_0EAQ",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "fast_button",
+                "X": 144,
+                "Y": 148,
+                "Width": 62,
+                "Height": 34,
+                "Pressed": "button_on-removebg-preview.png",
+                "Released": "button_off_use.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "collide_button",
+                "X": 144,
+                "Y": 194,
+                "Width": 62,
+                "Height": 34,
+                "Pressed": "button_off_use.png",
+                "Released": "button_on-removebg-preview.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "float_button",
+                "X": 144,
+                "Y": 98,
+                "Width": 62,
+                "Height": 34,
+                "Pressed": "button_on-removebg-preview.png",
+                "Released": "button_off_use.png"
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "Block_Collide_Container",
+            "Width": 250,
+            "Height": 250,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "Block_Collide_Screen",
+                "X": 24,
+                "Y": 80,
+                "Width": 190,
+                "Height": 161,
+                "Color": {
+                  "Red": 27,
+                  "Green": 118,
+                  "Blue": 245
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Block_Collide_Text",
+                "X": 36,
+                "Y": 121,
+                "Width": 159,
+                "Height": 72,
+                "TextId": "__SingleUse_P8E1",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true
+              }
+            ]
+          },
+          {
+            "Type": "Button",
+            "Name": "Block_Collide_Button",
+            "X": 103,
+            "Y": 223,
+            "Width": 36,
+            "Height": 36,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_micro_outline_pressed.png",
+            "Released": "X.png"
+          },
+          {
+            "Type": "Container",
+            "Name": "Block_Float_Container",
+            "Width": 250,
+            "Height": 250,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "Block_Float_Screen",
+                "X": 24,
+                "Y": 80,
+                "Width": 190,
+                "Height": 161,
+                "Color": {
+                  "Red": 27,
+                  "Green": 118,
+                  "Blue": 245
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Block_Float_Text",
+                "X": 36,
+                "Y": 121,
+                "Width": 166,
+                "Height": 72,
+                "TextId": "__SingleUse_U6MP",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "AutoSize": true
+              }
+            ]
+          },
+          {
+            "Type": "Button",
+            "Name": "Block_Float_Button",
+            "X": 103,
+            "Y": 223,
+            "Width": 36,
+            "Height": 36,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_micro_outline_pressed.png",
+            "Released": "X.png"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "food_game_over",
+            "X": 76,
+            "Y": 127,
+            "Width": 44,
+            "Height": 45,
+            "Visible": false,
+            "Filename": "apple-removebg-preview - Copy.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "score_game_over_text",
+            "X": 138,
+            "Y": 131,
+            "Width": 127,
+            "Height": 36,
+            "Visible": false,
+            "TextId": "__SingleUse_UTXT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_QPMV",
+              "UseBuffer": true,
+              "BufferSize": 10000
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "high_score_game_over_text",
+            "X": 138,
+            "Y": 182,
+            "Width": 113,
+            "Height": 31,
+            "Visible": false,
+            "TextId": "__SingleUse_H6UW",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_3EEL",
+              "UseBuffer": true,
+              "BufferSize": 10000
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "exit_home",
+            "X": 198,
+            "Y": 277,
+            "Width": 36,
+            "Height": 36,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_micro_outline_pressed.png",
+            "Released": "X.png"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "setting_label_image",
+            "X": 57,
+            "Y": 35,
+            "Width": 127,
+            "Height": 57,
+            "Visible": false,
+            "Filename": "SETTINGS.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "error_label_image",
+            "X": 66,
+            "Y": 62,
+            "Width": 107,
+            "Height": 48,
+            "Visible": false,
+            "Filename": "ERROR.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "high_score_game_over",
+            "X": 83,
+            "Y": 184,
+            "Width": 31,
+            "Height": 33,
+            "Visible": false,
+            "Filename": "Cup.PNG",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "high_score_image",
+            "X": 11,
+            "Y": 289,
+            "Width": 23,
+            "Height": 22,
+            "Visible": false,
+            "Filename": "Cup.PNG",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "game_over",
+            "X": 8,
+            "Y": 32,
+            "Width": 224,
+            "Height": 74,
+            "Visible": false,
+            "TextId": "__SingleUse_205P",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 250,
+              "Green": 179,
+              "Blue": 15
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Hide_button",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "on_button"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "on_button"
+            }
+          },
+          {
+            "InteractionName": "ShowBoxProgress",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "on_button"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "boxProgress1"
+            }
+          },
+          {
+            "InteractionName": "SetUpScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "start_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "BoxBorder"
+            }
+          },
+          {
+            "InteractionName": "Hide_start_button",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "start_button"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "start_button"
+            }
+          },
+          {
+            "InteractionName": "Up_Button_Handler",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "up_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Up_Button_Click"
+            }
+          },
+          {
+            "InteractionName": "Down_Button_Handler",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "down_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Down_Button_Click"
+            }
+          },
+          {
+            "InteractionName": "Left_Button_Handler",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "left_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Left_Button_Click"
+            }
+          },
+          {
+            "InteractionName": "Right_Button_Handler",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "right_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Right_Button_Click"
+            }
+          },
+          {
+            "InteractionName": "Retry_Handle",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "retry"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Retry_Function"
+            }
+          },
+          {
+            "InteractionName": "Exit_Handle",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Exit"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Exit_Function"
+            }
+          },
+          {
+            "InteractionName": "SettingButtonHandle",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "setting_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Setting_Button_Click"
+            }
+          },
+          {
+            "InteractionName": "BlockCollideHandle",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Block_Collide_Button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Block_Collide_Button_Click"
+            }
+          },
+          {
+            "InteractionName": "FloatButtonHandle",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "float_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Float_Button_Click"
+            }
+          },
+          {
+            "InteractionName": "CollideButtonHandle",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "collide_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Collide_Button_Click"
+            }
+          },
+          {
+            "InteractionName": "FastButtonHandle",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "fast_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Fast_Button_Click"
+            }
+          },
+          {
+            "InteractionName": "Block_Float_Handle",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Block_Float_Button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Block_Float_Button_Click"
+            }
+          },
+          {
+            "InteractionName": "ShowLoading",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "on_button"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "loading_image"
+            }
+          },
+          {
+            "InteractionName": "Home_Button_Click",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "home_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Home_Button_Click"
+            }
+          },
+          {
+            "InteractionName": "Exit_Home_Handle",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "exit_home"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "Exit_Home_Click"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "action1"
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "MyApplication_1",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 240,
+        "Height": 320
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait",
+    "Family": "STM32F4",
+    "SubFamily": "STM32F429/439",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../MyApplication_1.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "Vector"
+    ]
+  },
+  "Version": "4.22.1",
+  "CreatedBy": "4.22.1"
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.22.1">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1">
+      <Text Id="ResourceId2" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">New Text</Translation>
+      </Text>
+      <Text Id="ResourceId1" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">New Text</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_205P" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">GAME OVER</Translation>
+      </Text>
+      <Text Id="__SingleUse_3EEL" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_QPMV" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_H6UW" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_UTXT" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_U6MP" Alignment="Center" TypographyId="game_font_small">
+        <Translation Language="GB">CAN'T SELECT BECAUSE IF&#10;COLLIDE IS OFF YOU CAN'T&#10;SWITCH FLOAT TO ON</Translation>
+      </Text>
+      <Text Id="__SingleUse_P8E1" Alignment="Center" TypographyId="game_font_small">
+        <Translation Language="GB">CAN'T SELECT BECAUSE IF&#10;FLOAT IS ON YOU CAN'T&#10;SWITCH COLLIDE TO OFF</Translation>
+      </Text>
+      <Text Id="__SingleUse_KPHE" Alignment="Left" TypographyId="game_font_medium">
+        <Translation Language="GB">COLLIDE</Translation>
+      </Text>
+      <Text Id="__SingleUse_G5LM" Alignment="Left" TypographyId="game_font_medium">
+        <Translation Language="GB">FAST</Translation>
+      </Text>
+      <Text Id="__SingleUse_0EAQ" Alignment="Left" TypographyId="game_font_medium">
+        <Translation Language="GB">FLOAT</Translation>
+      </Text>
+      <Text Id="__SingleUse_470N" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_FB17" Alignment="Left" TypographyId="Default_Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_WFE6" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_PS0K" Alignment="Left" TypographyId="Default_Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="30" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7E" />
+    <Typography Id="Large" Font="ITCEDSCR.TTF" Size="80" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="game_font_small" Font="SunnyspellsRegular-MV9ze.otf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="game_font_medium" Font="SunnyspellsRegular-MV9ze.otf" Size="45" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Default_Small" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7E" />
+    <Typography Id="Typography_00" Font="SunnyspellsRegular-MV9ze.otf" Size="62" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+  </Typographies>
+</TextDatabase>
