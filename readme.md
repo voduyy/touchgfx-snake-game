@@ -16,7 +16,6 @@ We also design a menu game is include 3 buttons: setting, exit, play  <br />
   <img width="23%" src="https://github.com/dythuiiiii/touchgfx_snake_game/assets/134894679/8b27476a-31e1-4480-bd24-51ff59aefba6" /> <br />
    Screen menu game. <br />
 </p>
-
 When you open the setting, you can see 3 modes: float, fast, collide 
   1. `Float`: which means food can be float or not. If food is floating, when it collides with wall, it change direction immediately (Default `Float` is off).
   2. `Fast`: which means snake can go faster or not. Faster is double speed when it goes normally.(Default `Fast` is off).
