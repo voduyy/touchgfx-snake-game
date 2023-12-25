@@ -3,7 +3,7 @@ This TBS is configured for 320 x 240 pixels 16bpp screen resolution.  <br />
 
 Performance testing can be done using the GPIO pins designated with the following signals: VSYNC_FREQ  - Pin PE2, RENDER_TIME - Pin PE3, FRAME_RATE  - Pin PE4, MCU_ACTIVE  - Pin PE5
 <br />
-# DETAIL PROJECT
+# DETAIL PROJECT SNAKE++
 To open file, first open STM32CubeIDE then import project by clicking file -> import -> choose directory -> include all file -> finish.  <br />
 This game is include 4 control direction buttons: up, down, right, left. <br />
 <p align="center">
@@ -16,6 +16,7 @@ We also design a menu game is include 3 buttons: setting, exit, play  <br />
   <img width="23%" src="https://github.com/dythuiiiii/touchgfx_snake_game/assets/134894679/8b27476a-31e1-4480-bd24-51ff59aefba6" /> <br />
    Screen menu game. <br />
 </p>
+
 When you open the setting, you can see 3 modes: float, fast, collide 
   1. `Float`: which means food can be float or not. If food is floating, when it collides with wall, it change direction immediately (Default `Float` is off).
   2. `Fast`: which means snake can go faster or not. Faster is double speed when it goes normally.(Default `Fast` is off).
@@ -43,11 +44,13 @@ We design food will go randomly 2 directions: <br />
 </p>
 <br />
 
-# WHERE YOU CAN FIND CODE
-If you can file where code is, so you find this directory Code: <br />
- 1. Header where we modify class or define is in file header.txt <br />
- 2. File Screen1View.cpp which is main file we code is in Screen1View.txt <br />
- 3. File generate screen or widget is in generated.txt  <br />
 
+# WHERE YOU CAN FIND CODE
+If you can file where code is, so you find this directory Code:
+ 1. Header where we modify class or define is in file `header.txt` <br />
+ 2. File Screen1View.cpp which is main file we code is in `Screen1View.txt` <br />
+ 3. File generate screen or widget is in `generated.txt`  <br />
+
+Thanks to my friend who helps me at this project, QB ♥
 
  
