@@ -4,6 +4,10 @@ This TBS is configured for 320 x 240 pixels 16bpp screen resolution.  <br />
 Performance testing can be done using the GPIO pins designated with the following signals: VSYNC_FREQ  - Pin PE2, RENDER_TIME - Pin PE3, FRAME_RATE  - Pin PE4, MCU_ACTIVE  - Pin PE5
 <br />
 # DETAIL PROJECT SNAKE++
+<pre>
+  You must have STM32CubeIDE and version of project is 1.14.0, if you below this project, please update. 
+  Also you must have TouchGFX Designer version 4.22.1 and STM32 Programmer installed at its directory
+</pre>
 To open file, first open STM32CubeIDE then import project by clicking file -> import -> choose directory -> include all file -> finish.  <br />
 This game is include 4 control direction buttons: up, down, right, left. <br />
 <p align="center">
