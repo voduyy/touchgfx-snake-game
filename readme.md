@@ -46,7 +46,7 @@ We design food will go randomly 2 directions: <br />
 
 
 # WHERE YOU CAN FIND CODE
-If you can file where code is, so you find this directory Code:
+If you can't find where code is, so you find this directory Code:
  1. Header where we modify class or define is in file `header.txt` <br />
  2. File Screen1View.cpp which is main file we code is in `Screen1View.txt` <br />
  3. File generate screen or widget is in `generated.txt`  <br />
