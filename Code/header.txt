@@ -1,0 +1,198 @@
+#ifndef SCREEN1VIEW_HPP
+#define SCREEN1VIEW_HPP
+#include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
+#include <gui/screen1_screen/Screen1Presenter.hpp>
+#include <stdlib.h>
+#include <stdint.h>
+#include <iostream>
+#include <vector>
+using namespace std;
+//
+#define MAX_8BIT 255
+// LIMIT FOR BOX BORDER
+#define LIMIT_WALLX_RIGHT 220
+#define LIMIT_WALLX_LEFT 4
+#define LIMIT_WALLY_DOWN 226
+#define LIMIT_WALLY_UP 8
+
+// COORDINATE FOR RESPAWN SPRITE AT MIDDLE OF MAP
+#define SPAWN_COORDINATE_X 120
+#define SPAWN_COORDINATE_Y 125
+// DIRECTION FOR SPRITE
+#define SPRITE_UP 		-16
+#define SPRITE_DOWN 	16
+#define SPRITE_LEFT 	-16
+#define SPRITE_RIGHT 	16
+#define SPRITE_STOP  	0
+// DIRECITON FOR FOOD
+#define FOOD_UP 	-1
+#define FOOD_DOWN 	1
+#define FOOD_LEFT 	-1
+#define FOOD_RIGHT 	1
+#define FOOD_STOP 	0
+// SPEED
+#define SLOW 1
+#define FAST 2
+#define DELAY 10
+//	RESPAWN
+#define NUMBER_PIXEL 16
+// ADJUST ALPHA
+#define TWENTY_PERCENT_ALPHA 50
+#define MAX_ALPHA 255
+// CHECK IF OUT OF BOX BORDER
+#define OUT_OF_AXIS_X_LEFT 8
+#define OUT_OF_AXIS_X_RIGHT 232
+#define OUT_OF_AXIS_Y_UP 13
+#define OUT_OF_AXIS_Y_DOWN 237
+#define MAX_LENGTH_PAIR 4
+#define FIRST_DIRECTION 0
+#define SECOND_DIRECTION 1
+#define THIRD_DIRECTION 2
+#define FOURTH_DIRECTION 3
+#define BODY_FIRST_SEGMENT 0
+#define WIDTH_SEGMENT	16
+#define INITIALIZE_SEGMENT 3
+
+struct BoundingBox {
+	int16_t left = 0;
+	int16_t top = 0;
+	int16_t right = 0;
+	int16_t bottom = 0;
+};
+class Screen1View: public Screen1ViewBase {
+
+protected:
+	bool isGameStart :0x1; // game start is true, vice versa
+	bool isFirstPlay :0x1; // for high score, need to know this is a firstplay or not
+	bool isCollideMode :0x1; // is collide mode or not
+	bool isFastMode :0x1; // is fast mode or not
+	bool isFloatMode :0x1;// is float mode or not
+	bool direction_movement :0x1; // is diagonal or straight for food move
+	bool isGameRunning :0x1; // is game running or not
+	bool isAtMenuGame :0x1; //  is at menu game or not
+	int tick_counter; // tick counter for button fading
+	int random_direction, random_index; // random direction when food being eaten,
+		// random index is for at which state of array of direction diagonal or straight
+	int box_progress_value, index, count_segment;
+				// box_progess_value is for increase the value of box progress
+	int Speed, count_straight_line; // speed is speed for snake,
+						//count_straight_line for counting times of going straight
+	pair<int, int> PairOfDirection[MAX_LENGTH_PAIR];
+	// to make array of direction for moving food diagonal
+	int DirectionStraightX[MAX_LENGTH_PAIR / 2];
+		//array of direction for moving food go straight at X axis
+	int DirectionStraightY[MAX_LENGTH_PAIR / 2];
+		//array of direction for moving food go straight at Y axis
+	uint16_t score_value, high_score_value; // to save value of score at this round
+		// and save high_score of game
+	int8_t Vx, Vy; // use to increase X axis and Y axis for snake like speed
+	int8_t Food_Vx, Food_Vy; // use to increase X axis nad Y axis for food like speed
+
+
+	Box snakebody[32]; // initialize snake body
+	Box snaketail; // initialize snake tail
+	BoundingBox _food; //initialize bounding box for food
+	BoundingBox _HeadSnake; //initialize bounding box for head snake
+	BoundingBox _BodySnake[32]; // initialize bounding box for body snake
+	BoundingBox _TailSnake; // initialize bounding box for tail snake
+	vector<Box*> Snake; // initialize a vector to contains all body snake
+
+	ScalableImage *Head; // initialize a Head to reference to image head left,right,
+							// up, down
+
+	uint32_t counterTick; // to make a delay by the way, counting times go to
+							// function handleTickEvent()
+
+	int body_length; // initialize body_length
+public:
+
+	bool isLeft :0x1; // is snake go left
+	bool isRight :0x1; // is snake go right
+	bool isUp :0x1; // is snake go up
+	bool isDown :0x1; // is snake go down
+
+	// constructor
+	Screen1View();
+	virtual ~Screen1View() {
+	}
+	// initialize screen
+	virtual void setupScreen();
+	// destructor
+	virtual void tearDownScreen();
+	// for each 16.66 ms equal 60hz (overflow timer) will go to this function
+	virtual void handleTickEvent();
+	// initialize a box border for game
+	virtual void BoxBorder();
+	//handle when up button is clicked
+	virtual void Up_Button_Click();
+	// handle when down button is clicked
+	virtual void Down_Button_Click();
+	// handle when left button is clicked
+	virtual void Left_Button_Click();
+	// handle when right button is clicked
+	virtual void Right_Button_Click();
+	// handle when setting button is clicked
+	virtual void Setting_Button_Click();
+	// handle when float button is clicked
+	virtual void Float_Button_Click();
+	// handle when fast button is clicked
+	virtual void Fast_Button_Click();
+	// handle when collide button is clicked
+	virtual void Collide_Button_Click();
+	// handle when home button is clicked
+	virtual void Home_Button_Click();
+	// handle when block float button is clicked
+	virtual void Block_Float_Button_Click();
+	// handle when block collide button is click
+	virtual void Block_Collide_Button_Click();
+	// handle when retry button is click
+	virtual void Retry_Function();
+	// handle when exit button is click
+	virtual void Exit_Function();
+	// handle when exit home button is click
+	virtual void Exit_Home_Click();
+	// check if sprite(snake) is collided or not
+	bool isSpriteCollide();
+	// check if sprite(snake) is running or not
+	bool isSpriteRunning();
+	// check if food is collided or not
+	bool isFoodCollide();
+	// check if it is high score
+	bool isHighScore();
+	// check if snake eat food or not
+	bool CheckEating();
+	// check if snake out of box or not
+	bool isOutOfBox(int);
+	// check if head is hit body snake (collide is off)
+	bool isHeadHitBodySnake();
+	// to turn off multiple widget
+	void TurnOffWidget(int);
+	// to change sprite direction
+	void ChangeSpriteDirection();
+	// to change direction when go straight
+	void ChangeFoodDirectionOfStraight();
+	// to change direction when go diagonal
+	void ChangeFoodDirectionOfDiagonal();
+	// to fade widget when setting
+	void FadeWidget(int);
+	// to open menu game
+	void MenuGame();
+	// to spawn player
+	void SpawnPlayer();
+	// to set player invisible
+	void SetInvisiblePlayer();
+	// to generate food in float mode
+	void GenerateFoodFloatMode();
+	// to get bounding box of snake and foood
+	void GetBoundingBox();
+	// to insert more body snake
+	void InsertBodySnake();
+	// to spawn new position when snake went out of box
+	void SpawnNewPosition(int,int);
+	// to check if element of body is went out of box or not
+	void CheckEachElement();
+	// screen when game over
+	void EndGame();
+};
+
+#endif // SCREEN1VIEW_HPP
