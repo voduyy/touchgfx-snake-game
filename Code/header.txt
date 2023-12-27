@@ -33,7 +33,7 @@ using namespace std;
 // SPEED
 #define SLOW 1
 #define FAST 2
-#define DELAY 10
+#define DELAY 20
 //	RESPAWN
 #define NUMBER_PIXEL 16
 // ADJUST ALPHA
